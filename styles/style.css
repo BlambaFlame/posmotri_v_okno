@@ -26,7 +26,7 @@ html {
   display: grid;
   grid-template-columns: 712px 400px;
   grid-template-areas: "result content__details";
-  gap: 20px;
+  gap: 30px;
   width: 1140px;
 }
 
@@ -45,7 +45,6 @@ html {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 30px;
   height: 298px;
   overflow-y: auto;
 }
@@ -86,7 +85,11 @@ html {
 
 .content__list-item {
   padding: 0 3px 0 2px;
+  &:not(:last-child){
+    margin-bottom: 30px;
+  }
 }
+
 
 .content__video-card {
   display: flex;
@@ -95,6 +98,11 @@ html {
   align-items: start;
   gap: 5px;
   
+}
+
+.content__card-link_current {
+  display: block;
+  background-color: #545050;
 }
 
 .content__video-card:active {
@@ -106,6 +114,10 @@ html {
 }
 
 .content__video-card:focus {
+  outline: 1px solid #d9d9d9;
+}
+
+.content__video-card:focus-visible {
   outline: 1px solid #d9d9d9;
 }
 
@@ -122,7 +134,7 @@ html {
   object-position: center;
 }
 
-.preloader-template {
+.preloader {
   position: absolute;
   inset: 0;
 }
@@ -196,7 +208,7 @@ html {
   border: 1px solid #fff;
   font-weight: 700;
   font-size: 18px;
-  font-family: Fira Sans Condensed;
+  font-family: "Fira Sans Condensed", sans-serif;
 }
 
 .search-form__submit-button {
@@ -221,7 +233,6 @@ html {
 .more-button {
   padding: 6px 0;
   width: 100%;
-  margin-top: 30px;
 }
 
 .more-button:active {
@@ -266,6 +277,7 @@ html {
   outline: thick double #fff;
   outline-width: 3px;
 }
+
 
 .title {
   margin-bottom: 22px;
